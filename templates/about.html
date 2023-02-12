@@ -1,23 +1,30 @@
 {% extends "base.html" %}
+{% load static %}
+
 
 {% block content %}
 
 <!-- About Section -->
-<div class="container-fluid bg-light" id="about">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading">About</h2>
-        <hr />
-      </div>
+<div class="container mt-5">
+  <!-- Use a Bootstrap row to create two columns -->
+  <div class="row">
+    <!-- First column for the profile image -->
+    <div class="col-md-4">
+      <img src="{% static 'img/4.png' %}" class="img-fluid rounded-circle mb-3" alt="Profile Image">
     </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <p>
-          Bake n Ice is a cake and ice cream shop located in Pipariya, India.
-          Our cakes and ice cream are made with the freshest and finest
-          ingredients, making us the best cake and ice cream shop in town.
-          Whether you're in the mood for a sweet treat or a special dessert,
-          Bake n Ice has got you covered.
-        </p>
-      </div
-      {% endblock %}
+    <!-- Second column for the about content -->
+    <div class="col-md-8 text-center ">
+      <h2 class="mb-3 mt-5">About Us</h2>
+      <p>Welcome to Bake n Ice, a sweet destination for all your dessert cravings. Our bakery offers an array of
+        delicious cakes, pastries, and baked goods made fresh daily. From classic flavors to unique and creative treats,
+        we have something for everyone to enjoy. </p>
+      <p>At Bake n Ice, we believe that dessert should not only taste good, but look good too. That's why we take pride
+        in our presentation and use only the finest ingredients to create treats that are as beautiful as they are
+        delicious. </p>
+      <p> Our team of skilled bakers and pastry chefs are dedicated to providing our customers with the best experience
+        possible. Whether you're grabbing a quick treat on the go or sitting down for a leisurely dessert, we want you
+        to feel like you're part of the Bake n Ice family.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

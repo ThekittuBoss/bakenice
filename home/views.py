@@ -5,11 +5,8 @@ from .models import Contact
 def home(request):
     return render(request, "home.html")
 
-def contact(request):
-    return render(request, "contact.html")    
-
-
-
+def about(request):
+    return render(request, "about.html")    
 
 def contact_form(request):
     if request.method == 'POST':
