@@ -25,4 +25,5 @@ urlpatterns = [
     path('about/',views.about, name='contact'),
     path('contact/',views.contact_form, name='contact'),
     path('success/', views.success_view, name='success'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    path('menu/', views.menu, name='menu'),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

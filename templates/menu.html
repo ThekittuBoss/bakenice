@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container my-3">
+    <div class="row">
+{% for menuitem in menuitem %}
+<div class="card mb-3 mx-2" style="max-width: 540px;">
+    <div class="row g-2">
+      <div class="col-md-3">
+        <img src="{{ menuitem.img.url }}" class="img-fluid rounded-start" alt="{{ menuitem.img.name }}">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ menuitem.title }}</h5>
+          <p class="card-text">{{ menuitem.desc }}.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+</div>
+{% endblock %}

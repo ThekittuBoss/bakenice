@@ -9,3 +9,11 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
+
+class menuIteam(models.Model):
+    Item_name = models.CharField(max_length=50)
+    img = models.ImageField(upload_to='menu')
+    desc = models.TextField()
+
+    def __str__(self):
+        return self.Item_name

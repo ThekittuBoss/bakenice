@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Contact
-
+from .models import Contact, menuIteam
 # Create your views here.
 def home(request):
     return render(request, "home.html")
@@ -28,3 +27,8 @@ def contact_form(request):
 
 def success_view(request):
     return render(request, 'success.html')
+
+def menu(request):
+    menuitem = menuIteam.objects.all()
+    context = {'menuitem': menuitem}
+    return render(request, 'menu.html', context)
