@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<div class="container">
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="title">Item_name:</label>
+      <input type="text" class="form-control" id="Item_name" name="Item_name">
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea class="form-control" id="desc" name="desc"></textarea>
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="image">Image:</label>
+      <input type="file" class="form-control-file" id="img" name="img">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Save</button>
+  </form>
+</div>
+{% endblock %}
